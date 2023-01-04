@@ -1,0 +1,7 @@
+<?php
+
+include("config/functions.php");
+session_destroy();
+unset($_SESSION['username']);
+
+header("Location: index.php");

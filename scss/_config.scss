@@ -1,0 +1,16 @@
+$sidebar-color: #042331;
+$primary-color: #0e6cff;
+
+@function set-text-color($color) {
+    @if(lightness($color)) > 7 {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
